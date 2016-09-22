@@ -1,2 +1,2 @@
-swapfiles
-backupfiles
+swapfiles/*
+backupfiles/*
