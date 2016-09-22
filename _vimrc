@@ -27,3 +27,6 @@ set encoding=utf-8
 
 " Have .config files behave like html
 au BufRead,BufNewFile *.config set filetype=xml
+
+" FormatJSON command
+com! Formatjson %!python -m json.tool
