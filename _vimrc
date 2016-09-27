@@ -1,4 +1,4 @@
-" execute pathogen#infect()
+execute pathogen#infect()
 
 filetype plugin indent on
 syntax on	
@@ -13,8 +13,8 @@ syntax on
 :set tabstop=4 shiftwidth=4 expandtab smartindent smartindent
 
 " Move vim extra files
-:set directory=$HOME/.vim/swapfiles//
-:set backupdir=$HOME/.vim/backupfiles//
+:set directory=$HOME/vimfiles/swapfiles//
+:set backupdir=$HOME/vimfiles/backupfiles//
 
 " Activate all the handy Windows key-bindings we're used to.
 source $VIMRUNTIME/mswin.vim
@@ -30,3 +30,13 @@ au BufRead,BufNewFile *.config set filetype=xml
 
 " FormatJSON command
 com! Formatjson %!python -m json.tool
+
+" Syntactic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
