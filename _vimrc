@@ -3,6 +3,12 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on	
 
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=50 columns=90
+endif
+
 :set number
 :set relativenumber
 
